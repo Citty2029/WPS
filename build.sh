@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #rm -rf .repo/local_manifests/
-#repo init -u https://github.com/AfterlifeOS/android_manifest.git -b 14 --git-lfs
+repo init -u https://github.com/AfterlifeOS/android_manifest.git -b 14 --git-lfs
 
 echo "--------------------------------------"
 echo "Repo init success"
 echo "--------------------------------------"
-#repo init -u https://github.com/AfterlifeOS/android_manifest.git -b 14 --git-lfs
+repo init -u https://github.com/AfterlifeOS/android_manifest.git -b 14 --git-lfs
 
 # build
 /opt/crave/resync.sh
@@ -142,11 +142,7 @@ rm -rf .repo
 rm -rf out/target/product/a04e/*
 
 #start build a04e
-lunch lineage_a04e-ap4a-userdebug
 lunch lineage_a04e-ap2a-userdebug
-lunch lineage_a04e-ap1a-userdebug
-lunch lineage_a04e-userdebug
-lunch lineage_a04e-ap3a-userdebug
 
 #m evolution
 mka bacon -j$(nproc --all)
